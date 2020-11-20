@@ -103,14 +103,14 @@ function feedDog(){
   }
   database.ref('/').update({
     Food:foodObj.getFoodStock(),
+    FeedTime:hour()
   })
 }
 
 function addFoods(){
   foodS++;
   database.ref('/').update({
-    Food:foodS,
-    FeedTime:hour()
+    Food:foodS
   })
 }
 
